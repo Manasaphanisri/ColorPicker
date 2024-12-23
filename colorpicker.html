@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker</title>
+
+    <!-- Bootstrap CSS Link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+
+    <!-- Google Fonts Link -->
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
+
+    <!-- jQuery and Bootstrap JS Links -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <!-- Custom CSS -->
+    <style>
+        .one {
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .classone,
+        .classtwo,
+        .classthree,
+        .classfour {
+            height: 80px;
+            width: 80px;
+            border-style: solid;
+            border-color: black;
+            border-width: 2px;
+            border-radius: 15px;
+            margin: 10px;
+        }
+
+        .classone {
+            background-color: #e0e0e0;
+        }
+
+        .classtwo {
+            background-color: #6fcf97;
+        }
+
+        .classthree {
+            background-color: #56ccf2;
+        }
+
+        .classfour {
+            background-color: #bb6bd9;
+        }
+
+        .background {
+            background-color: black;
+            height: 10vh;
+            width: 100vw;
+            border-radius: 6px;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            margin: 20px;
+        }
+
+        /* Center content */
+        .one {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .background p {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="colorPickerContainer" class="one">
+        <h1>Color Picker</h1>
+        <div>
+            <button id="button1" class="classone" onclick="one()">#e0e0e0</button>
+            <button id="button2" class="classtwo" onclick="two()">#6fcf97</button>
+            <button id="button3" class="classthree" onclick="three()">#56ccf2</button>
+            <button id="button4" class="classfour" onclick="four()">#bb6bd9</button>
+        </div>
+        <p id="second" class="background">Background Color : <span id="selectedColorHexCode" style="color: #49a6e9">#ffffff</span></p>
+        <p>Try clicking on one of the colors above to change the background color of this page!</p>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script>
+        function one() {
+            document.getElementById("colorPickerContainer").style.backgroundColor = "#e0e0e0";
+            document.getElementById("selectedColorHexCode").textContent = "#e0e0e0";
+            document.getElementById("selectedColorHexCode").style.color = "#49a6e9";
+        }
+
+        function two() {
+            document.getElementById("colorPickerContainer").style.backgroundColor = "#6fcf97";
+            document.getElementById("selectedColorHexCode").textContent = "#6fcf97";
+            document.getElementById("selectedColorHexCode").style.color = "#49a6e9";
+        }
+
+        function three() {
+            document.getElementById("colorPickerContainer").style.backgroundColor = "#56ccf2";
+            document.getElementById("selectedColorHexCode").textContent = "#56ccf2";
+            document.getElementById("selectedColorHexCode").style.color = "#49a6e9";
+        }
+
+        function four() {
+            document.getElementById("colorPickerContainer").style.backgroundColor = "#bb6bd9";
+            document.getElementById("selectedColorHexCode").textContent = "#bb6bd9";
+            document.getElementById("selectedColorHexCode").style.color = "#49a6e9";
+        }
+    </script>
+</body>
+
+</html>
